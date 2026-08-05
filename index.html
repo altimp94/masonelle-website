@@ -3,226 +3,294 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Masonelle Products — Building Products & Supply, Southern Utah</title>
-<meta name="description" content="Masonelle Products LLC — cabinets, flooring, countertops, and blinds, supplied and installed in Southern Utah. Quality materials, personal service, builder-direct pricing.">
+<title>Masonelle Products — Supply You Can Build On | Southern Utah</title>
+<meta name="description" content="Masonelle Products LLC — cabinets, countertops, flooring, and blinds, specified, sourced, and installed for builders and homeowners across southern Utah.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
-    --ivory: #faf7f2;
-    --paper: #f3eee6;
-    --ink: #26221d;
-    --ink-soft: #5c554b;
-    --bronze: #9a6b3f;
-    --bronze-dark: #7d5430;
-    --line: #e2dacd;
+    --navy: #1d2634;
+    --navy-deep: #161d28;
+    --cream: #f1ede5;
+    --white: #ffffff;
+    --ink: #1d2634;
+    --ink-soft: #b8bfca;      /* light text on navy */
+    --ink-mute: #5a6270;      /* muted text on light */
+    --rust: #b05a28;
+    --rust-dark: #96491e;
+    --line-light: #e3ded3;
+    --line-dark: #2b3546;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html { scroll-behavior: smooth; }
   body {
-    font-family: Georgia, 'Times New Roman', serif;
-    background: var(--ivory);
+    font-family: 'Jost', 'Segoe UI', Arial, sans-serif;
+    background: var(--navy);
     color: var(--ink);
-    line-height: 1.7;
+    line-height: 1.6;
+    font-weight: 300;
   }
-  .sans { font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; }
+  img, svg { max-width: 100%; }
 
+  /* ---------- top utility bar ---------- */
+  .topbar {
+    background: var(--navy-deep);
+    color: #97a0ad;
+    font-size: .72rem; letter-spacing: .14em; text-transform: uppercase;
+    padding: .55rem 1.5rem;
+    display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
+  }
+  .topbar .grp { display: flex; gap: 1.6rem; flex-wrap: wrap; }
+  .topbar strong { color: #c6ccd6; font-weight: 500; }
+  .topbar a.phone { color: var(--rust); text-decoration: none; font-weight: 500; letter-spacing: .12em; }
+
+  /* ---------- header ---------- */
   header {
-    position: sticky; top: 0; z-index: 10;
-    background: rgba(250,247,242,.92); backdrop-filter: blur(8px);
-    border-bottom: 1px solid var(--line);
+    position: sticky; top: 0; z-index: 20;
+    background: var(--white);
+    box-shadow: 0 1px 0 rgba(0,0,0,.06);
   }
   .nav {
-    max-width: 1100px; margin: 0 auto; padding: 1.1rem 1.5rem;
-    display: flex; align-items: center; justify-content: space-between;
+    max-width: 1240px; margin: 0 auto; padding: 1rem 1.5rem;
+    display: flex; align-items: center; gap: 1rem;
   }
-  .wordmark {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    letter-spacing: .35em; font-weight: 600; font-size: .95rem;
-    text-transform: uppercase; color: var(--ink); text-decoration: none;
+  .brand { display: flex; align-items: center; gap: .8rem; text-decoration: none; margin-right: auto; }
+  .brand .mark { width: 44px; height: 34px; flex: none; }
+  .brand .word { line-height: 1.15; }
+  .brand .word .top {
+    font-weight: 600; letter-spacing: .28em; font-size: 1.05rem; color: var(--ink);
   }
-  .wordmark span { color: var(--bronze); }
-  nav a.link {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    font-size: .85rem; letter-spacing: .08em; text-transform: uppercase;
-    color: var(--ink-soft); text-decoration: none; margin-left: 1.6rem;
+  .brand .word .sub {
+    font-weight: 400; letter-spacing: .34em; font-size: .55rem; color: #9aa1ab; text-transform: uppercase;
   }
-  nav a.link:hover { color: var(--bronze-dark); }
+  nav.links { display: flex; gap: 1.9rem; align-items: center; }
+  nav.links a {
+    color: var(--ink); text-decoration: none;
+    font-size: .8rem; letter-spacing: .14em; text-transform: uppercase; font-weight: 500;
+  }
+  nav.links a:hover { color: var(--rust); }
+  .btn {
+    display: inline-block; text-decoration: none; text-align: center;
+    font-size: .8rem; letter-spacing: .14em; text-transform: uppercase; font-weight: 500;
+    padding: .85rem 1.6rem; border-radius: 2px;
+    transition: background .2s, color .2s, border-color .2s;
+  }
+  .btn.navy { background: var(--navy); color: var(--white); }
+  .btn.navy:hover { background: var(--rust); }
+  .btn.rust { background: var(--rust); color: var(--white); }
+  .btn.rust:hover { background: var(--rust-dark); }
+  .btn.outline-light { border: 1px solid #5c6675; color: var(--white); background: transparent; }
+  .btn.outline-light:hover { border-color: var(--white); }
 
-  .hero {
-    max-width: 1100px; margin: 0 auto; padding: 6.5rem 1.5rem 5rem;
-    text-align: center;
+  /* ---------- hero ---------- */
+  .hero { background: var(--navy); color: var(--white); }
+  .hero .wrap {
+    max-width: 1240px; margin: 0 auto;
+    padding: 7.5rem 1.5rem 8.5rem;
   }
   .kicker {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    font-size: .8rem; letter-spacing: .3em; text-transform: uppercase;
-    color: var(--bronze); margin-bottom: 1.4rem;
+    display: flex; align-items: center; gap: .9rem;
+    color: var(--rust); font-size: .78rem; letter-spacing: .3em; text-transform: uppercase; font-weight: 500;
+    margin-bottom: 2rem;
   }
-  h1 {
-    font-size: clamp(2.2rem, 5.5vw, 3.8rem);
-    font-weight: 400; line-height: 1.15; letter-spacing: -.01em;
-    max-width: 18ch; margin: 0 auto 1.5rem;
+  .kicker::before { content: ""; width: 44px; height: 2px; background: var(--rust); }
+  .hero h1 {
+    font-weight: 500; font-size: clamp(2.6rem, 6.5vw, 5rem);
+    line-height: 1.06; letter-spacing: .01em; max-width: 13ch;
+    margin-bottom: 1.8rem;
   }
-  .hero p {
-    max-width: 52ch; margin: 0 auto 2.4rem; font-size: 1.1rem; color: var(--ink-soft);
+  .hero p.lead {
+    color: var(--ink-soft); font-size: 1.15rem; font-weight: 300;
+    max-width: 46ch; margin-bottom: 2.6rem;
   }
-  .btn {
-    display: inline-block; font-family: 'Segoe UI', Arial, sans-serif;
-    font-size: .85rem; letter-spacing: .12em; text-transform: uppercase;
-    background: var(--ink); color: var(--ivory); text-decoration: none;
-    padding: .95rem 2.2rem; border-radius: 2px;
-    transition: background .2s;
-  }
-  .btn:hover { background: var(--bronze-dark); }
-  .btn.ghost {
-    background: transparent; color: var(--ink);
-    border: 1px solid var(--ink); margin-left: .8rem;
-  }
-  .btn.ghost:hover { border-color: var(--bronze-dark); color: var(--bronze-dark); background: transparent; }
+  .hero .ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
 
-  .rule {
-    width: 48px; height: 2px; background: var(--bronze); margin: 0 auto;
+  /* ---------- stat band ---------- */
+  .stats { background: var(--cream); }
+  .stats .wrap {
+    max-width: 1240px; margin: 0 auto;
+    display: grid; grid-template-columns: repeat(4, 1fr);
   }
-
-  section { padding: 4.5rem 1.5rem; }
-  .wrap { max-width: 1100px; margin: 0 auto; }
-  .band { background: var(--paper); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-
-  h2 {
-    font-weight: 400; font-size: clamp(1.6rem, 3vw, 2.2rem);
-    text-align: center; margin-bottom: .8rem;
-  }
-  .sub {
-    text-align: center; color: var(--ink-soft); max-width: 58ch;
-    margin: 1.2rem auto 3rem;
+  .stat { padding: 2.6rem 2rem; border-left: 1px solid var(--line-light); }
+  .stat:first-child { border-left: none; }
+  .stat .num { font-size: 2.6rem; font-weight: 500; color: var(--ink); line-height: 1; }
+  .stat .num small { font-size: 1.2rem; font-weight: 400; }
+  .stat .lbl {
+    margin-top: .6rem; font-size: .72rem; letter-spacing: .18em; text-transform: uppercase;
+    color: var(--ink-mute); font-weight: 400;
   }
 
-  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.4rem; }
-  .card {
-    background: var(--ivory); border: 1px solid var(--line);
-    padding: 2.2rem 1.8rem; border-radius: 3px;
+  /* ---------- shared section styling ---------- */
+  section .wrap { max-width: 1240px; margin: 0 auto; padding: 5.5rem 1.5rem; }
+  .sec-kicker {
+    display: flex; align-items: center; gap: .9rem;
+    color: var(--rust); font-size: .74rem; letter-spacing: .3em; text-transform: uppercase; font-weight: 500;
+    margin-bottom: 1.2rem;
   }
-  .card .num {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    color: var(--bronze); font-size: .8rem; letter-spacing: .25em; margin-bottom: 1rem;
-  }
-  .card h3 { font-weight: 400; font-size: 1.25rem; margin-bottom: .7rem; }
-  .card p { color: var(--ink-soft); font-size: .98rem; }
+  .sec-kicker::before { content: ""; width: 34px; height: 2px; background: var(--rust); }
+  h2 { font-weight: 500; font-size: clamp(1.8rem, 3.4vw, 2.6rem); line-height: 1.15; margin-bottom: 1rem; }
+  .sec-sub { color: var(--ink-mute); max-width: 62ch; margin-bottom: 3rem; font-size: 1.02rem; }
 
-  .about-grid {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items: center;
+  /* products */
+  .products { background: var(--white); }
+  .grid4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; }
+  .pcard {
+    border: 1px solid var(--line-light); border-top: 3px solid var(--rust);
+    padding: 1.9rem 1.5rem; background: var(--white);
   }
-  .about-grid p { color: var(--ink-soft); margin-bottom: 1rem; }
-  .about-grid h2 { text-align: left; }
-  .about-mark {
-    aspect-ratio: 4/3; border: 1px solid var(--line); border-radius: 3px;
-    background:
-      linear-gradient(135deg, rgba(154,107,63,.08), rgba(154,107,63,0) 55%),
-      repeating-linear-gradient(90deg, var(--paper) 0 46px, var(--line) 46px 48px);
-    display: flex; align-items: center; justify-content: center;
+  .pcard h3 { font-weight: 500; font-size: 1.15rem; letter-spacing: .04em; margin-bottom: .6rem; }
+  .pcard p { color: var(--ink-mute); font-size: .95rem; }
+
+  /* install band */
+  .install { background: var(--navy); color: var(--white); }
+  .install h2 { color: var(--white); }
+  .install .cols { display: grid; grid-template-columns: 1.1fr 1fr; gap: 3.5rem; align-items: center; }
+  .install p { color: var(--ink-soft); margin-bottom: 1rem; }
+  .steps { counter-reset: step; display: grid; gap: 1rem; }
+  .step {
+    display: flex; gap: 1.1rem; align-items: baseline;
+    border-left: 1px solid var(--line-dark); padding: .8rem 0 .8rem 1.2rem;
   }
-  .about-mark .m {
-    font-family: 'Segoe UI', Arial, sans-serif; letter-spacing: .5em;
-    text-transform: uppercase; color: var(--bronze-dark); font-size: .85rem;
-    background: var(--ivory); padding: 1rem 1.6rem 1rem 2.1rem;
-    border: 1px solid var(--line);
+  .step::before {
+    counter-increment: step; content: "0" counter(step);
+    color: var(--rust); font-weight: 500; letter-spacing: .1em; font-size: .85rem;
   }
-  @media (max-width: 780px) {
-    .about-grid { grid-template-columns: 1fr; gap: 2rem; }
-    .btn.ghost { margin-left: 0; margin-top: .8rem; }
+  .step h4 { display: inline; font-weight: 500; font-size: 1rem; letter-spacing: .06em; }
+  .step span { color: var(--ink-soft); font-size: .92rem; display: block; }
+
+  /* trade accounts */
+  .trade { background: var(--cream); }
+  .trade .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items: center; }
+  .trade p { color: var(--ink-mute); margin-bottom: 1rem; }
+  .trade ul { list-style: none; display: grid; gap: .8rem; }
+  .trade li { display: flex; gap: .8rem; align-items: baseline; font-weight: 400; }
+  .trade li::before { content: "—"; color: var(--rust); font-weight: 500; }
+
+  /* about */
+  .about { background: var(--white); }
+  .about .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; }
+  .about p { color: var(--ink-mute); margin-bottom: 1rem; }
+
+  /* contact / footer */
+  .contact { background: var(--navy-deep); color: var(--white); }
+  .contact .cols { display: grid; grid-template-columns: 1.2fr 1fr; gap: 3rem; align-items: center; }
+  .contact h2 { color: var(--white); }
+  .contact p { color: var(--ink-soft); }
+  .contact .big-links { display: grid; gap: .5rem; margin-top: 1.4rem; }
+  .contact .big-links a {
+    color: var(--white); text-decoration: none; font-size: clamp(1.2rem, 2.6vw, 1.7rem); font-weight: 400;
+  }
+  .contact .big-links a:hover { color: var(--rust); }
+  .contact .meta { font-size: .8rem; letter-spacing: .14em; text-transform: uppercase; color: #97a0ad; margin-top: 1.6rem; line-height: 2; }
+  footer {
+    background: var(--navy-deep); color: #6e7785;
+    text-align: center; font-size: .72rem; letter-spacing: .14em; text-transform: uppercase;
+    padding: 1.6rem 1.5rem; border-top: 1px solid var(--line-dark);
+  }
+
+  /* ---------- responsive ---------- */
+  @media (max-width: 1020px) {
+    .grid4 { grid-template-columns: repeat(2, 1fr); }
+    .install .cols, .trade .cols, .about .cols, .contact .cols { grid-template-columns: 1fr; gap: 2.2rem; }
+  }
+  @media (max-width: 820px) {
+    nav.links { display: none; }
+    .stats .wrap { grid-template-columns: repeat(2, 1fr); }
+    .stat { border-left: none; border-top: 1px solid var(--line-light); }
+    .stat:nth-child(even) { border-left: 1px solid var(--line-light); }
+    .stat:nth-child(-n+2) { border-top: none; }
+    .hero .wrap { padding: 4.5rem 1.25rem 5rem; }
+    section .wrap { padding: 3.8rem 1.25rem; }
   }
   @media (max-width: 640px) {
-    .nav {
-      flex-direction: column; gap: .7rem;
-      padding: .9rem 1rem .8rem;
-    }
-    nav { display: flex; flex-wrap: wrap; justify-content: center; gap: .3rem 1.1rem; }
-    nav a.link { margin-left: 0; font-size: .78rem; }
-    .hero { padding: 3.5rem 1.25rem 3rem; }
-    .hero p { font-size: 1rem; }
-    .hero .btn { display: block; width: fit-content; margin: 0 auto .8rem; }
-    section { padding: 3rem 1.25rem; }
-    .card { padding: 1.7rem 1.4rem; }
-    .contact a.big { word-break: break-word; }
-  }
-
-  .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 1rem; counter-reset: step; }
-  .step { text-align: center; padding: 1.4rem .8rem; }
-  .step::before {
-    counter-increment: step; content: counter(step, decimal-leading-zero);
-    display: block; font-family: 'Segoe UI', Arial, sans-serif;
-    color: var(--bronze); letter-spacing: .2em; font-size: .85rem; margin-bottom: .6rem;
-  }
-  .step h4 { font-weight: 400; font-size: 1.05rem; margin-bottom: .3rem; }
-  .step p { color: var(--ink-soft); font-size: .88rem; }
-
-  .contact { text-align: center; }
-  .contact a.big {
-    display: block; color: var(--ink); text-decoration: none;
-    font-size: clamp(1.3rem, 3.5vw, 2rem); margin: .4rem 0;
-  }
-  .contact a.big:hover { color: var(--bronze-dark); }
-  .contact .note { color: var(--ink-soft); font-size: .95rem; margin-top: 1.6rem; }
-
-  footer {
-    border-top: 1px solid var(--line); padding: 2rem 1.5rem; text-align: center;
-    font-family: 'Segoe UI', Arial, sans-serif; font-size: .8rem;
-    letter-spacing: .06em; color: var(--ink-soft);
+    .topbar { justify-content: center; text-align: center; font-size: .64rem; }
+    .nav { padding: .85rem 1rem; }
+    .nav .btn { padding: .7rem 1rem; font-size: .72rem; }
+    .stats .wrap { grid-template-columns: 1fr 1fr; }
+    .stat { padding: 1.8rem 1.2rem; }
+    .stat .num { font-size: 2rem; }
+    .hero .ctas .btn { flex: 1 1 100%; }
   }
 </style>
 </head>
 <body>
 
+<div class="topbar">
+  <div class="grp">
+    <span><strong>Showroom:</strong> 1552 E Gateway Dr, St. George UT</span>
+    <span>Mon–Fri 7:30a–5:30p · Sat by appointment</span>
+  </div>
+  <div class="grp">
+    <span>A Desert Legacy Company</span>
+    <a class="phone" href="tel:+14352120959">(435) 212-0959</a>
+  </div>
+</div>
+
 <header>
   <div class="nav">
-    <a class="wordmark" href="#top">Masonelle<span>&nbsp;Products</span></a>
-    <nav>
-      <a class="link" href="#about">About</a>
-      <a class="link" href="#materials">Supply</a>
-      <a class="link" href="#process">Process</a>
-      <a class="link" href="#contact">Contact</a>
+    <a class="brand" href="#top">
+      <svg class="mark" viewBox="0 0 52 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M4 36 L20 8 L26 18" fill="none" stroke="#b05a28" stroke-width="5" stroke-linecap="square"/>
+        <path d="M26 18 L32 8 L48 36" fill="none" stroke="#1d2634" stroke-width="5" stroke-linecap="square"/>
+      </svg>
+      <span class="word">
+        <span class="top">MASONELLE</span><br>
+        <span class="sub">Products&nbsp;LLC</span>
+      </span>
+    </a>
+    <nav class="links">
+      <a href="#products">Products</a>
+      <a href="#install">Install</a>
+      <a href="#trade">Trade Accounts</a>
+      <a href="#about">About</a>
     </nav>
+    <a class="btn navy" href="#contact">Request a Quote</a>
   </div>
 </header>
 
 <main id="top">
-  <div class="hero">
-    <div class="kicker">Southern Utah &middot; Building Products &amp; Supply</div>
-    <h1>Quality products, handled personally from quote to install.</h1>
-    <p>Masonelle Products is an independent supply-and-install company serving homeowners and builders across Southern Utah — cabinets, flooring, countertops, and blinds with straight answers and direct, honest pricing.</p>
-    <a class="btn" href="#contact">Request a Quote</a>
-    <a class="btn ghost" href="#services">What We Do</a>
-  </div>
 
-  <section class="band" id="about">
-    <div class="wrap about-grid">
-      <div>
-        <h2>Built on follow-through.</h2>
-        <div class="rule" style="margin: 1.2rem 0 1.6rem;"></div>
-        <p>Masonelle Products brings years of building-industry experience quoting, sourcing, and installing projects across Southern Utah — from single rooms to full custom homes and condo units.</p>
-        <p>Every project runs through one set of hands. You get the quote, the ordering, and the follow-through from the same person you first spoke with — no handoffs, no call centers. Today the core of the business is cabinetry and millwork; the product lines are growing scope by scope.</p>
+  <section class="hero">
+    <div class="wrap">
+      <div class="kicker">Southern Utah &middot; Supply &amp; Install</div>
+      <h1>Supply you can build on.</h1>
+      <p class="lead">Cabinets, countertops, flooring, and blinds — specified, sourced, and installed for builders and homeowners across southern Utah.</p>
+      <div class="ctas">
+        <a class="btn rust" href="#contact">Bid My Next Project</a>
+        <a class="btn outline-light" href="https://maps.google.com/?q=1552+E+Gateway+Dr,+St.+George,+UT" target="_blank" rel="noopener">Visit the Showroom</a>
       </div>
-      <div class="about-mark"><div class="m">Masonelle</div></div>
     </div>
   </section>
 
-  <section id="materials">
+  <section class="stats">
     <div class="wrap">
-      <h2>What we supply</h2>
-      <div class="rule" style="margin-top: 1.2rem;"></div>
-      <p class="sub">Four trades under one roof — supplied and installed — with more scopes coming online as we grow.</p>
-      <div class="cards materials">
-        <div class="card">
+      <div class="stat"><div class="num">4</div><div class="lbl">Trades Under One Roof</div></div>
+      <div class="stat"><div class="num">1,500+</div><div class="lbl">Finish SKUs Available</div></div>
+      <div class="stat"><div class="num">75<small>mi</small></div><div class="lbl">Service Area</div></div>
+      <div class="stat"><div class="num">48<small>hr</small></div><div class="lbl">Bid Turnaround</div></div>
+    </div>
+  </section>
+
+  <section class="products" id="products">
+    <div class="wrap">
+      <div class="sec-kicker">What We Supply</div>
+      <h2>Four trades. One contact.</h2>
+      <p class="sec-sub">Every product line is quoted, ordered, and delivered by the same team that installs it — no handoffs, no finger-pointing between trades.</p>
+      <div class="grid4">
+        <div class="pcard">
           <h3>Cabinets</h3>
           <p>Framed and frameless lines in today's most requested styles — shaker, slim shaker, white oak, and painted finishes.</p>
         </div>
-        <div class="card">
-          <h3>Flooring</h3>
-          <p>LVP, hardwood, tile, and carpet from proven manufacturers, matched to how each space actually gets used.</p>
-        </div>
-        <div class="card">
+        <div class="pcard">
           <h3>Countertops</h3>
           <p>Quartz, granite, and solid-surface tops — templated, fabricated, and coordinated with your cabinet install.</p>
         </div>
-        <div class="card">
+        <div class="pcard">
+          <h3>Flooring</h3>
+          <p>LVP, hardwood, tile, and carpet from proven manufacturers, matched to how each space actually gets used.</p>
+        </div>
+        <div class="pcard">
           <h3>Blinds</h3>
           <p>Window blinds and shades measured to fit, in styles that finish the room without blowing the budget.</p>
         </div>
@@ -230,59 +298,85 @@
     </div>
   </section>
 
-  <section class="band" id="services">
+  <section class="install" id="install">
     <div class="wrap">
-      <h2>How we work</h2>
-      <div class="rule" style="margin-top: 1.2rem;"></div>
-      <p class="sub">From first quote to delivered product, Masonelle covers the full path — or just the piece you need.</p>
-      <div class="cards">
-        <div class="card">
-          <div class="num">01</div>
-          <h3>Product Supply</h3>
-          <p>Quality building products sourced through trusted manufacturers at builder-direct pricing across all four trades.</p>
+      <div class="cols">
+        <div>
+          <div class="sec-kicker">Supply &amp; Install</div>
+          <h2>Specified, sourced, and installed by one team.</h2>
+          <p>Masonelle handles the full path — layout and drawings, itemized quotes, ordering, freight, and professional installation. You deal with one point of contact from the first quote to the finished room.</p>
+          <p>Builder or homeowner, single room or full custom home: the process is the same, and the follow-through is the point.</p>
         </div>
-        <div class="card">
-          <div class="num">02</div>
-          <h3>Design &amp; Quoting</h3>
-          <p>Detailed layouts, drawings, and itemized quotes — revised with you until the plan is right, before anything is ordered. No surprises on the invoice.</p>
-        </div>
-        <div class="card">
-          <div class="num">03</div>
-          <h3>Installation</h3>
-          <p>Ordering, freight, delivery, and professional installation handled end-to-end — one point of contact from the first quote to the finished room.</p>
+        <div class="steps">
+          <div class="step"><div><h4>Consult</h4><span>We walk your project, scope, and budget.</span></div></div>
+          <div class="step"><div><h4>Design</h4><span>Drawings and options to review before anything is ordered.</span></div></div>
+          <div class="step"><div><h4>Quote</h4><span>A clear, itemized bid — no surprises on the invoice.</span></div></div>
+          <div class="step"><div><h4>Order</h4><span>Product ordered, tracked, and staged for your schedule.</span></div></div>
+          <div class="step"><div><h4>Install</h4><span>Delivered and professionally installed.</span></div></div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="process">
+  <section class="trade" id="trade">
     <div class="wrap">
-      <h2>How it works</h2>
-      <div class="rule" style="margin-top: 1.2rem;"></div>
-      <p class="sub">A simple, transparent process — most quotes turn around in days, not weeks.</p>
-      <div class="steps">
-        <div class="step"><h4>Consult</h4><p>We talk through your project, scope, and budget.</p></div>
-        <div class="step"><h4>Design</h4><p>You receive drawings and options to review.</p></div>
-        <div class="step"><h4>Quote</h4><p>A clear, itemized quote — no surprises.</p></div>
-        <div class="step"><h4>Order</h4><p>Product ordered and tracked to your door.</p></div>
-        <div class="step"><h4>Install</h4><p>Delivered and professionally installed.</p></div>
+      <div class="cols">
+        <div>
+          <div class="sec-kicker">For Builders</div>
+          <h2>Trade accounts that keep your schedule.</h2>
+          <p>Building across southern Utah? Put all four finish trades on one bid, one delivery calendar, and one phone number.</p>
+        </div>
+        <ul>
+          <li>Builder-direct pricing across all four trades</li>
+          <li>48-hour bid turnaround on plan sets</li>
+          <li>Scheduling coordinated with your supers — not against them</li>
+          <li>One invoice, one contact, zero finger-pointing</li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <section id="contact">
-    <div class="wrap contact">
-      <h2>Start your project</h2>
-      <div class="rule" style="margin: 1.2rem auto 2rem;"></div>
-      <a class="big" href="tel:+14352120959">(435) 212-0959</a>
-      <a class="big" href="mailto:alma@masonelleproducts.com">alma@masonelleproducts.com</a>
-      <p class="note">Serving St. George, Washington County, and greater Southern Utah.</p>
+  <section class="about" id="about">
+    <div class="wrap">
+      <div class="sec-kicker">About Masonelle</div>
+      <div class="cols">
+        <div>
+          <h2>Built on follow-through.</h2>
+        </div>
+        <div>
+          <p>Masonelle Products brings years of building-industry experience quoting, sourcing, and installing projects across southern Utah — from single rooms to full custom homes and condo units.</p>
+          <p>Every project runs through one set of hands. You get the quote, the ordering, and the follow-through from the same team you first spoke with — no handoffs, no call centers.</p>
+        </div>
+      </div>
     </div>
   </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div class="cols">
+        <div>
+          <div class="sec-kicker">Start Your Project</div>
+          <h2>Get a bid this week.</h2>
+          <p>Call, email, or stop by the showroom — plans and rough sketches both welcome.</p>
+          <div class="big-links">
+            <a href="tel:+14352120959">(435) 212-0959</a>
+            <a href="mailto:alma@masonelleproducts.com">alma@masonelleproducts.com</a>
+          </div>
+        </div>
+        <div class="meta">
+          Showroom<br>
+          1552 E Gateway Dr, St. George UT<br>
+          Mon–Fri 7:30a–5:30p<br>
+          Sat by appointment
+        </div>
+      </div>
+    </div>
+  </section>
+
 </main>
 
 <footer>
-  &copy; 2026 Masonelle Products LLC &middot; Southern Utah
+  &copy; 2026 Masonelle Products LLC &middot; A Desert Legacy Company &middot; Southern Utah
 </footer>
 
 </body>

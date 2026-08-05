@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Masonelle Products — Fine Cabinetry, Southern Utah</title>
+<meta name="description" content="Masonelle Products LLC — boutique cabinetry design, supply, and project coordination in Southern Utah. Quality cabinets, personal service, builder-direct pricing.">
+<style>
+  :root {
+    --ivory: #faf7f2;
+    --paper: #f3eee6;
+    --ink: #26221d;
+    --ink-soft: #5c554b;
+    --bronze: #9a6b3f;
+    --bronze-dark: #7d5430;
+    --line: #e2dacd;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: Georgia, 'Times New Roman', serif;
+    background: var(--ivory);
+    color: var(--ink);
+    line-height: 1.7;
+  }
+  .sans { font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; }
+
+  header {
+    position: sticky; top: 0; z-index: 10;
+    background: rgba(250,247,242,.92); backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav {
+    max-width: 1100px; margin: 0 auto; padding: 1.1rem 1.5rem;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .wordmark {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    letter-spacing: .35em; font-weight: 600; font-size: .95rem;
+    text-transform: uppercase; color: var(--ink); text-decoration: none;
+  }
+  .wordmark span { color: var(--bronze); }
+  nav a.link {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: .85rem; letter-spacing: .08em; text-transform: uppercase;
+    color: var(--ink-soft); text-decoration: none; margin-left: 1.6rem;
+  }
+  nav a.link:hover { color: var(--bronze-dark); }
+
+  .hero {
+    max-width: 1100px; margin: 0 auto; padding: 6.5rem 1.5rem 5rem;
+    text-align: center;
+  }
+  .kicker {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: .8rem; letter-spacing: .3em; text-transform: uppercase;
+    color: var(--bronze); margin-bottom: 1.4rem;
+  }
+  h1 {
+    font-size: clamp(2.2rem, 5.5vw, 3.8rem);
+    font-weight: 400; line-height: 1.15; letter-spacing: -.01em;
+    max-width: 18ch; margin: 0 auto 1.5rem;
+  }
+  .hero p {
+    max-width: 52ch; margin: 0 auto 2.4rem; font-size: 1.1rem; color: var(--ink-soft);
+  }
+  .btn {
+    display: inline-block; font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: .85rem; letter-spacing: .12em; text-transform: uppercase;
+    background: var(--ink); color: var(--ivory); text-decoration: none;
+    padding: .95rem 2.2rem; border-radius: 2px;
+    transition: background .2s;
+  }
+  .btn:hover { background: var(--bronze-dark); }
+  .btn.ghost {
+    background: transparent; color: var(--ink);
+    border: 1px solid var(--ink); margin-left: .8rem;
+  }
+  .btn.ghost:hover { border-color: var(--bronze-dark); color: var(--bronze-dark); background: transparent; }
+
+  .rule {
+    width: 48px; height: 2px; background: var(--bronze); margin: 0 auto;
+  }
+
+  section { padding: 4.5rem 1.5rem; }
+  .wrap { max-width: 1100px; margin: 0 auto; }
+  .band { background: var(--paper); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+
+  h2 {
+    font-weight: 400; font-size: clamp(1.6rem, 3vw, 2.2rem);
+    text-align: center; margin-bottom: .8rem;
+  }
+  .sub {
+    text-align: center; color: var(--ink-soft); max-width: 58ch;
+    margin: 1.2rem auto 3rem;
+  }
+
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.4rem; }
+  .card {
+    background: var(--ivory); border: 1px solid var(--line);
+    padding: 2.2rem 1.8rem; border-radius: 3px;
+  }
+  .card .num {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: var(--bronze); font-size: .8rem; letter-spacing: .25em; margin-bottom: 1rem;
+  }
+  .card h3 { font-weight: 400; font-size: 1.25rem; margin-bottom: .7rem; }
+  .card p { color: var(--ink-soft); font-size: .98rem; }
+
+  .about-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items: center;
+  }
+  .about-grid p { color: var(--ink-soft); margin-bottom: 1rem; }
+  .about-grid h2 { text-align: left; }
+  .about-mark {
+    aspect-ratio: 4/3; border: 1px solid var(--line); border-radius: 3px;
+    background:
+      linear-gradient(135deg, rgba(154,107,63,.08), rgba(154,107,63,0) 55%),
+      repeating-linear-gradient(90deg, var(--paper) 0 46px, var(--line) 46px 48px);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .about-mark .m {
+    font-family: 'Segoe UI', Arial, sans-serif; letter-spacing: .5em;
+    text-transform: uppercase; color: var(--bronze-dark); font-size: .85rem;
+    background: var(--ivory); padding: 1rem 1.6rem 1rem 2.1rem;
+    border: 1px solid var(--line);
+  }
+  @media (max-width: 780px) {
+    .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .btn.ghost { margin-left: 0; margin-top: .8rem; }
+  }
+
+  .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 1rem; counter-reset: step; }
+  .step { text-align: center; padding: 1.4rem .8rem; }
+  .step::before {
+    counter-increment: step; content: counter(step, decimal-leading-zero);
+    display: block; font-family: 'Segoe UI', Arial, sans-serif;
+    color: var(--bronze); letter-spacing: .2em; font-size: .85rem; margin-bottom: .6rem;
+  }
+  .step h4 { font-weight: 400; font-size: 1.05rem; margin-bottom: .3rem; }
+  .step p { color: var(--ink-soft); font-size: .88rem; }
+
+  .contact { text-align: center; }
+  .contact a.big {
+    display: block; color: var(--ink); text-decoration: none;
+    font-size: clamp(1.3rem, 3.5vw, 2rem); margin: .4rem 0;
+  }
+  .contact a.big:hover { color: var(--bronze-dark); }
+  .contact .note { color: var(--ink-soft); font-size: .95rem; margin-top: 1.6rem; }
+
+  footer {
+    border-top: 1px solid var(--line); padding: 2rem 1.5rem; text-align: center;
+    font-family: 'Segoe UI', Arial, sans-serif; font-size: .8rem;
+    letter-spacing: .06em; color: var(--ink-soft);
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a class="wordmark" href="#top">Masonelle<span>&nbsp;Products</span></a>
+    <nav>
+      <a class="link" href="#about">About</a>
+      <a class="link" href="#services">Services</a>
+      <a class="link" href="#process">Process</a>
+      <a class="link" href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="kicker">Southern Utah &middot; Est. Cabinetry &amp; Millwork</div>
+    <h1>Fine cabinetry, handled personally from drawing to delivery.</h1>
+    <p>Masonelle Products is a boutique cabinetry company serving homeowners and builders across Southern Utah — thoughtful design, quality product lines, and direct, honest pricing.</p>
+    <a class="btn" href="#contact">Request a Quote</a>
+    <a class="btn ghost" href="#services">What We Do</a>
+  </div>
+
+  <section class="band" id="about">
+    <div class="wrap about-grid">
+      <div>
+        <h2>A small company, on purpose.</h2>
+        <div class="rule" style="margin: 1.2rem 0 1.6rem;"></div>
+        <p>Masonelle Products LLC is owned and operated by Alma C Timpson, a cabinetry professional with years of experience designing, quoting, and delivering projects across Southern Utah — from single vanities to full custom homes and condo units.</p>
+        <p>Every project runs through one set of hands. You get the drawings, the quote, the ordering, and the follow-through from the same person you first spoke with — no handoffs, no call centers.</p>
+      </div>
+      <div class="about-mark"><div class="m">Masonelle</div></div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="wrap">
+      <h2>What we do</h2>
+      <div class="rule" style="margin-top: 1.2rem;"></div>
+      <p class="sub">From first sketch to installed kitchen, Masonelle covers the full path — or just the piece you need.</p>
+      <div class="cards">
+        <div class="card">
+          <div class="num">01</div>
+          <h3>Design &amp; Layout</h3>
+          <p>Detailed cabinet layouts and 3D drawings for kitchens, baths, laundries, and built-ins — revised with you until the plan is right, before anything is ordered.</p>
+        </div>
+        <div class="card">
+          <div class="num">02</div>
+          <h3>Cabinet Supply</h3>
+          <p>Quality framed and frameless cabinet lines in today's most requested styles — shaker, slim shaker, white oak, and painted finishes — sourced through trusted manufacturers.</p>
+        </div>
+        <div class="card">
+          <div class="num">03</div>
+          <h3>Project Coordination</h3>
+          <p>Quoting, ordering, freight, and delivery scheduling handled end-to-end, with clear communication for homeowners, builders, and installers alike.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="process">
+    <div class="wrap">
+      <h2>How it works</h2>
+      <div class="rule" style="margin-top: 1.2rem;"></div>
+      <p class="sub">A simple, transparent process — most quotes turn around in days, not weeks.</p>
+      <div class="steps">
+        <div class="step"><h4>Consult</h4><p>We talk through your space, style, and budget.</p></div>
+        <div class="step"><h4>Design</h4><p>You receive drawings and options to review.</p></div>
+        <div class="step"><h4>Quote</h4><p>A clear, itemized quote — no surprises.</p></div>
+        <div class="step"><h4>Order</h4><p>Cabinets ordered and tracked to your door.</p></div>
+        <div class="step"><h4>Deliver</h4><p>Coordinated delivery, ready for install.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap contact">
+      <h2>Start your project</h2>
+      <div class="rule" style="margin: 1.2rem auto 2rem;"></div>
+      <a class="big" href="tel:+14352120959">(435) 212-0959</a>
+      <a class="big" href="mailto:alma@masonelleproducts.com">alma@masonelleproducts.com</a>
+      <p class="note">Serving St. George, Washington County, and greater Southern Utah.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  &copy; 2026 Masonelle Products LLC &middot; Southern Utah
+</footer>
+
+</body>
+</html>

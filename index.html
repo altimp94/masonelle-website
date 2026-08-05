@@ -129,6 +129,20 @@
     .about-grid { grid-template-columns: 1fr; gap: 2rem; }
     .btn.ghost { margin-left: 0; margin-top: .8rem; }
   }
+  @media (max-width: 640px) {
+    .nav {
+      flex-direction: column; gap: .7rem;
+      padding: .9rem 1rem .8rem;
+    }
+    nav { display: flex; flex-wrap: wrap; justify-content: center; gap: .3rem 1.1rem; }
+    nav a.link { margin-left: 0; font-size: .78rem; }
+    .hero { padding: 3.5rem 1.25rem 3rem; }
+    .hero p { font-size: 1rem; }
+    .hero .btn { display: block; width: fit-content; margin: 0 auto .8rem; }
+    section { padding: 3rem 1.25rem; }
+    .card { padding: 1.7rem 1.4rem; }
+    .contact a.big { word-break: break-word; }
+  }
 
   .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 1rem; counter-reset: step; }
   .step { text-align: center; padding: 1.4rem .8rem; }
@@ -162,7 +176,7 @@
     <a class="wordmark" href="#top">Masonelle<span>&nbsp;Products</span></a>
     <nav>
       <a class="link" href="#about">About</a>
-      <a class="link" href="#services">Services</a>
+      <a class="link" href="#materials">Supply</a>
       <a class="link" href="#process">Process</a>
       <a class="link" href="#contact">Contact</a>
     </nav>
@@ -173,7 +187,7 @@
   <div class="hero">
     <div class="kicker">Southern Utah &middot; Building Products &amp; Supply</div>
     <h1>Quality products, handled personally from quote to delivery.</h1>
-    <p>Masonelle Products is an independent supply company serving homeowners and builders across Southern Utah — quality product lines, straight answers, and direct, honest pricing.</p>
+    <p>Masonelle Products is an independent supply company serving homeowners and builders across Southern Utah — cabinets, flooring, countertops, and blinds with straight answers and direct, honest pricing.</p>
     <a class="btn" href="#contact">Request a Quote</a>
     <a class="btn ghost" href="#services">What We Do</a>
   </div>
@@ -190,16 +204,42 @@
     </div>
   </section>
 
-  <section id="services">
+  <section id="materials">
     <div class="wrap">
-      <h2>What we do</h2>
+      <h2>What we supply</h2>
+      <div class="rule" style="margin-top: 1.2rem;"></div>
+      <p class="sub">Four trades under one roof today — with more scopes coming online as we grow.</p>
+      <div class="cards materials">
+        <div class="card">
+          <h3>Cabinets</h3>
+          <p>Framed and frameless lines in today's most requested styles — shaker, slim shaker, white oak, and painted finishes.</p>
+        </div>
+        <div class="card">
+          <h3>Flooring</h3>
+          <p>LVP, hardwood, tile, and carpet from proven manufacturers, matched to how each space actually gets used.</p>
+        </div>
+        <div class="card">
+          <h3>Countertops</h3>
+          <p>Quartz, granite, and solid-surface tops — templated, fabricated, and coordinated with your cabinet install.</p>
+        </div>
+        <div class="card">
+          <h3>Blinds</h3>
+          <p>Window blinds and shades measured to fit, in styles that finish the room without blowing the budget.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="services">
+    <div class="wrap">
+      <h2>How we work</h2>
       <div class="rule" style="margin-top: 1.2rem;"></div>
       <p class="sub">From first quote to delivered product, Masonelle covers the full path — or just the piece you need.</p>
       <div class="cards">
         <div class="card">
           <div class="num">01</div>
           <h3>Product Supply</h3>
-          <p>Quality building products sourced through trusted manufacturers at builder-direct pricing. Cabinetry and millwork today, with additional trade scopes coming online.</p>
+          <p>Quality building products sourced through trusted manufacturers at builder-direct pricing across all four trades.</p>
         </div>
         <div class="card">
           <div class="num">02</div>
@@ -215,7 +255,7 @@
     </div>
   </section>
 
-  <section class="band" id="process">
+  <section id="process">
     <div class="wrap">
       <h2>How it works</h2>
       <div class="rule" style="margin-top: 1.2rem;"></div>
